@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packettor", "Packettor\Packettor.csproj", "{A6BF1F8B-1564-43E5-BBC6-AF96F7B5C58B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6BF1F8B-1564-43E5-BBC6-AF96F7B5C58B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6BF1F8B-1564-43E5-BBC6-AF96F7B5C58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6BF1F8B-1564-43E5-BBC6-AF96F7B5C58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6BF1F8B-1564-43E5-BBC6-AF96F7B5C58B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54B2286A-B093-4CAC-A7C0-FD9EC39A46CD}
+	EndGlobalSection
+EndGlobal
