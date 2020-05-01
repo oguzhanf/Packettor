@@ -1,0 +1,3 @@
+[submodule "Pcap.Net"]
+	path = Pcap.Net
+	url = https://github.com/PcapDotNet/Pcap.Net.git
