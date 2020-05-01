@@ -34,6 +34,9 @@
             this.lblSizeSent = new System.Windows.Forms.Label();
             this.lblSize = new System.Windows.Forms.Label();
             this.lblNumPacketsSent = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnStartMon = new System.Windows.Forms.Button();
+            this.btnStopMon = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -90,11 +93,42 @@
             this.lblNumPacketsSent.TabIndex = 5;
             this.lblNumPacketsSent.Text = "label6";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(487, 12);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(2128, 562);
+            this.textBox1.TabIndex = 6;
+            // 
+            // btnStartMon
+            // 
+            this.btnStartMon.Location = new System.Drawing.Point(62, 22);
+            this.btnStartMon.Name = "btnStartMon";
+            this.btnStartMon.Size = new System.Drawing.Size(75, 23);
+            this.btnStartMon.TabIndex = 7;
+            this.btnStartMon.Text = "startMon";
+            this.btnStartMon.UseVisualStyleBackColor = true;
+            this.btnStartMon.Click += new System.EventHandler(this.btnStartMon_Click);
+            // 
+            // btnStopMon
+            // 
+            this.btnStopMon.Location = new System.Drawing.Point(144, 22);
+            this.btnStopMon.Name = "btnStopMon";
+            this.btnStopMon.Size = new System.Drawing.Size(75, 23);
+            this.btnStopMon.TabIndex = 8;
+            this.btnStopMon.Text = "stopMon";
+            this.btnStopMon.UseVisualStyleBackColor = true;
+            this.btnStopMon.Click += new System.EventHandler(this.btnStopMon_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(2627, 583);
+            this.Controls.Add(this.btnStopMon);
+            this.Controls.Add(this.btnStartMon);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblNumPacketsSent);
             this.Controls.Add(this.lblSize);
             this.Controls.Add(this.lblSizeSent);
@@ -117,6 +151,9 @@
         private System.Windows.Forms.Label lblSizeSent;
         private System.Windows.Forms.Label lblSize;
         private System.Windows.Forms.Label lblNumPacketsSent;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnStartMon;
+        private System.Windows.Forms.Button btnStopMon;
     }
 }
 
