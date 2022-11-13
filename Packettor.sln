@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packettor", "Packettor\Packettor.csproj", "{A6BF1F8B-1564-43E5-BBC6-AF96F7B5C58B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSC", "RSC\RSC.csproj", "{FEE04661-1E45-4473-AC36-D83AF20DB99A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSCService", "RSCService\RSCService.csproj", "{63D4AA22-71FE-4973-92E8-A38167CA8671}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A6BF1F8B-1564-43E5-BBC6-AF96F7B5C58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6BF1F8B-1564-43E5-BBC6-AF96F7B5C58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6BF1F8B-1564-43E5-BBC6-AF96F7B5C58B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE04661-1E45-4473-AC36-D83AF20DB99A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE04661-1E45-4473-AC36-D83AF20DB99A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE04661-1E45-4473-AC36-D83AF20DB99A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE04661-1E45-4473-AC36-D83AF20DB99A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D4AA22-71FE-4973-92E8-A38167CA8671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D4AA22-71FE-4973-92E8-A38167CA8671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D4AA22-71FE-4973-92E8-A38167CA8671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D4AA22-71FE-4973-92E8-A38167CA8671}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

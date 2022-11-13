@@ -69,10 +69,21 @@ namespace Packettor
         }
 
         private void btnStopMon_Click(object sender, EventArgs e)
-        {
-            kernelsession.Stop();
+        {  
             thr.Abort();
+            kernelsession.Stop();
+          
                 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            int lastline = textBox1.Lines.Count();
+            if (textBox1.Lines[lastline - 1] == textBox1.Lines[lastline - 2])
+            {
+                textBox1.Lines[lastline - 2] = "Duplicate: " + textBox1.Lines[lastline - 2];
+            }
+            textBox1.ScrollToCaret();   
         }
 
         void SendPacketUpdateUI(TcpIpSendTraceData obj)
@@ -81,18 +92,24 @@ namespace Packettor
             ++numSent;
             lblNumPacketsSent.Text = numSent.ToString();
             lblSizeSent.Text = sizeSent.ToString();
-            textBox1.AppendText("SENT: " +
-                                "Dest: " + obj.daddr.ToString() +
-                                "Src: " + obj.saddr.ToString() +
-                                "SPort: " + obj.sport.ToString() +
-                                "DPort: " + obj.dport.ToString() +
-                                "Size: " + obj.size.ToString() + 
-                                "Seq: " + obj.seqnum.ToString() + 
-                                "Process: " + obj.ProcessName +
-                                "Hash: " + obj.GetHashCode().ToString() +
-                                Environment.NewLine
-                                );
-            this.Text = kernelsession.EventsLost.ToString();
+            //textBox1.AppendText("SENT: " +
+            //                    "Dest: " + obj.daddr.ToString() +
+            //                    "Src: " + obj.saddr.ToString() +
+            //                    "SPort: " + obj.sport.ToString() +
+            //                    "DPort: " + obj.dport.ToString() +
+            //                    "Size: " + obj.size.ToString() + 
+            //                    "Seq: " + obj.seqnum.ToString() + 
+            //                    "Process: " + obj.ProcessName +
+            //                    "Hash: " + obj.GetHashCode().ToString() +
+            //                    Environment.NewLine
+            //                    );
+            textBox1.AppendText(CreateMD5(Encoding.Default.GetBytes(obj.Dump(true, false) +
+                    obj.seqnum.ToString() +
+                    obj.size.ToString() +
+                    obj.saddr.ToString() +
+                    obj.sport.ToString() +
+                    obj.daddr.ToString() +
+                    obj.dport.ToString())) + Environment.NewLine);
         }
 
         void ReceivePacketUpdateUI(TcpIpTraceData obj)
@@ -101,18 +118,26 @@ namespace Packettor
             ++numReceived;
             lblNumPacketsReceived.Text = numReceived.ToString();
             lblSize.Text = sizeReceived.ToString();
-            textBox1.AppendText("RECEIVED: " +
-                                "\tDest: " + obj.daddr.ToString() +
-                                "\tSrc: " + obj.saddr.ToString() +
-                                "\tSPort: " + obj.sport.ToString() +
-                                "\tDPort: " + obj.dport.ToString() +
-                                "\tSize: " + obj.size.ToString() +
-                                "\tSeq: " + obj.seqnum.ToString() +
-                                "\tProcess: " + obj.ProcessName +
-                                "\tHash: " + obj.Dump(true, false) + 
-                                Environment.NewLine
-                                );
-            this.Text = kernelsession.EventsLost.ToString();
+            //textBox1.AppendText("RECEIVED: " +
+            //                    "\tDest: " + obj.daddr.ToString() +
+            //                    "\tSrc: " + obj.saddr.ToString() +
+            //                    "\tSPort: " + obj.sport.ToString() +
+            //                    "\tDPort: " + obj.dport.ToString() +
+            //                    "\tSize: " + obj.size.ToString() +
+            //                    "\tSeq: " + obj.seqnum.ToString() +
+            //                    "\tProcess: " + obj.ProcessName +
+            //                    "\tHash: " + obj.Dump(true, false) + 
+            //                    Environment.NewLine
+            //                    );
+            
+            textBox1.AppendText(CreateMD5(Encoding.Default.GetBytes( obj.Dump(true, false) + 
+                obj.seqnum.ToString() + 
+                obj.size.ToString() + 
+                obj.saddr.ToString() + 
+                obj.sport.ToString()+ 
+                obj.daddr.ToString() + 
+                obj.dport.ToString() ))+ Environment.NewLine);
+            
         }
 
         public static string CreateMD5(byte[] input)
