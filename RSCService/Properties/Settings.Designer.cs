@@ -22,5 +22,14 @@ namespace RSCService.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("c:\\NetworkLogs")]
+        public string logFileLocation {
+            get {
+                return ((string)(this["logFileLocation"]));
+            }
+        }
     }
 }

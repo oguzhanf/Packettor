@@ -46,6 +46,7 @@
     <Reference Include="Microsoft.Diagnostics.Tracing.TraceEvent, Version=3.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Diagnostics.Tracing.TraceEvent.3.0.5\lib\net462\Microsoft.Diagnostics.Tracing.TraceEvent.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="OSExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Diagnostics.Tracing.TraceEvent.3.0.5\lib\net462\OSExtensions.dll</HintPath>
     </Reference>
@@ -91,16 +92,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TCPIPReceiveHandler.cs">
+    <Compile Include="TCPReceiveHandler.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TCPIPSendHandler.cs">
+    <Compile Include="TCPSendHandler.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UdpIpReceiveHandler.cs">
+    <Compile Include="UDPReceiveHandler.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UdpIpSendHandler.cs">
+    <Compile Include="UDPSendHandler.cs">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
